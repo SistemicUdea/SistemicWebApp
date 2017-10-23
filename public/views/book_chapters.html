@@ -1,0 +1,22 @@
+<div>
+  <table class="table table-striped">
+    <thead>
+      <th>Title</th>
+      <th>Title Book</th>
+      <th>Pags</th>
+      <th>Editores</th>
+      <th>Editorial</th>
+      <th>Year</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="bookChapter in book_chapters">
+        <td>{{ bookChapter.title }}</td>
+        <td>{{ bookChapter.titleBook }}</td>
+        <td>{{ bookChapter.pages }}</td>
+        <td>{{ bookChapter.editors }}</td>
+        <td>{{ bookChapter.editorial }}</td>
+        <td>{{ bookChapter.year }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

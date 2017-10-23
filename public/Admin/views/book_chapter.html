@@ -1,0 +1,63 @@
+<h2>Add new book chapter</h2>
+<div class="row">
+  <div class="col-md-6">
+
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Title:</label>
+        <div class="col-sm-10">
+          <input name="title" ng-model="bookChapter.Title" class="form-control" placeholder="Insert the chapter's title" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Book Title:</label>
+        <div class="col-sm-10">
+          <input name="bookTitle" ng-model="bookChapter.TitleBook" class="form-control" placeholder="Insert the book's title" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Pages:</label>
+        <div class="col-sm-10">
+          <input name="pags" ng-model="bookChapter.Pags" class="form-control" placeholder="Pages [0-9] - [0-9]"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Editorial:</label>
+        <div class="col-sm-10">
+          <input name="editorial" ng-model="bookChapter.Editorial" class="form-control" placeholder="Publisher's name" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Year:</label>
+        <div class="col-sm-10">
+          <input name="year" ng-model="bookChapter.Year" type="number" min="1900" max="{{currentYear}}" class="form-control" placeholder="Publication Year" required/>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Author:</label>
+        <div class="col-sm-10">
+          <select ng-model="bookChapter.Author" class="form-control" name="author">
+            <option ng-repeat="option in autores" value="{{option.name}}">{{option.name}}</option>
+          </select>
+        </div>
+      </div>
+      
+      <input type="submit" class="btn btn-primary" ng-click="saveBookChapter()" value="Save"/>
+
+      <div class="form-group BAuthor">
+        <div class="col-sm-10">
+          <p class="Advert-text">If you don't see an author. Please, add a new one here!</p>
+        </div>
+        <div class="col-sm-10">
+          <a class="btn btn-primary" href="#!/author">New Author</a>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<h2>Add new book edition</h2>
+<div class="row">
+  <div class="col-md-6">
+
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Title:</label>
+        <div class="col-sm-10">
+          <input name="title" ng-model="bookEdition.Title" class="form-control" placeholder="Ingrese el título del libro" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Pages:</label>
+        <div class="col-sm-10">
+          <input name="page" ng-model="bookEdition.Pags" min="0" type="number" class="form-control" placeholder="Número de páginas" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Editores:</label>
+        <div class="col-sm-10">
+          <input name="editores" ng-model="bookEdition.Editores" class="form-control" placeholder="Editores del libro" required/>
+          <p><strong>Por favor separar los autores por ','</strong></p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Editorial:</label>
+        <div class="col-sm-10">
+          <input name="editorial" ng-model="bookEdition.Editorial" class="form-control" placeholder="Nombre de la editorial" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Year:</label>
+        <div class="col-sm-10">
+          <input name="year" ng-model="bookEdition.Year" type="number" min="1900" max="{{currentYear}}" class="form-control" placeholder="Año de publicación" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Author:</label>
+        <div class="col-sm-10">
+          <select ng-model="bookEdition.Author" class="form-control" name="author">
+            <option ng-repeat="option in autores" value="{{option.name}}">{{option.name}}</option>
+          </select>
+        </div>
+      </div>
+
+      <input type="submit" class="btn btn-primary" ng-click="saveBookEdition()" value="Save"/>
+    </form>
+  </div>
+</div>

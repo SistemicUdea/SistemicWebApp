@@ -1,0 +1,55 @@
+<!--
+  @Developer: Juan Camilo Peña Vahos
+  @Description: Vista de 'Agregar nuevo autor'
+  @Notes:
+    ->Se usan estilos de Bootstrap y de la clase estilos del desarrollador
+    ->Se usa ng-model para facilitar la forma de obtener los datos con el controlador de angular
+  @ToDo:
+    ->Mostrar una lista de autores con los datos que hay en firebase.
+-->
+
+<h2>NEW AUTHOR</h2>
+
+<div class="row">
+  <div class="col-md-6">
+    <form class="form-horizontal">
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name">Full Name:</label>
+        <div class="col-sm-10">
+          <input name="name" ng-model="author.Name" class="form-control" placeholder="Nombre completo del autor" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Email:</label>
+        <div class="col-sm-10">
+          <input name="email" ng-model="author.Email" class="form-control" placeholder="Email" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Active:</label>
+        <div class="col-sm-10">
+            <input type="checkbox" ng-model="author.Active"  name="active" value="false">  Check if author is available at the moment.<br>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="membershipType">Membership Type:</label>
+        <div class="col-sm-10">
+          <select ng-model="author.MembershipType" class="form-control" name="membershipType">
+              <option value="Investigador Asociado">Research Asociate</option>
+              <option value="Profesor">Professor</option>
+              <option value="Estudiante Pregrado">Undergraduate Student</option>
+              <option value="Estudiante Maestria">Masters Student</option>
+              <option value="Estudiante Doctorado">PhD Student</option>
+          </select>
+        </div>
+      </div>
+
+      <input type="submit" class="btn btn-primary" ng-click="saveAuthor()" value="Save"/>
+      
+    </form>
+  </div>
+</div>

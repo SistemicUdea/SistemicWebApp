@@ -1,0 +1,73 @@
+<!-- DEVELOPER:  Juan Camilo Peña Vahos -->
+<!-- DESCRIPTION: Este documento es el punto de acceso del administrador-->
+<!-- DATELASTUPDATE: 17/07/2017 -->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Sistemic Publications</title>
+        <!--META DATA-->
+        <meta charset='utf-8'>
+        <meta name="description" content="Sistemic Group Database Admin">
+        <!--StyleSheets-->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/Css" href="styles/estilos.css"/>   
+    </head>
+    <body ng-app="AdminModule" > <!--Bootstraping the main module -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display-->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#!/">Sistemic Publications Admin</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Publication type <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#!/book">Book</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#!/bookChapter">Book Chapter</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#!/bookEdition">Book Edition</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#!/conference">Conference Article</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#!/journal">Journal Article</a></li>
+                                <li class="divider"></li>                                
+                                <li><a href="#!/patent">Patent</a></li>
+                                <li class="divider"></li>                                
+                                <li><a href="#!/report">Technical Report</a></li>
+                                <li class="divider"></li>                                
+                                <li><a href="#!/thesis">Thesis</a></li>                              
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main_container" ng-view=""></div>
+        <!--FIREBASE SCRIPTS-->
+        <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+        <script type="text/javascript" src="scripts/firebaseconnection.js"></script>
+
+        <!--SCRIPTS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+        <!--Scripts by our team-->
+        <script type="text/javascript" src="scripts/app.js"></script>
+        <script type="text/javascript" src="scripts/controllers/add.js"></script>
+        <script type="text/javascript" src="scripts/controllers/main.js"></script>
+    </body>
+</html>

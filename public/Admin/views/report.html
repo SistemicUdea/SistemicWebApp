@@ -1,0 +1,40 @@
+<h2>Add new technical report</h2>
+<div class="row">
+  <div class="col-md-6">
+
+    <form class="form-horizontal">
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Title:</label>
+        <div class="col-sm-10">
+          <input name="title" ng-model="report.Title" class="form-control" placeholder="Ingrese titulo del reporte" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Date:</label>
+        <div class="col-sm-10">
+          <input name="date" ng-model="report.Date" class="form-control" placeholder="DD/MM/AAAA" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Year:</label>
+        <div class="col-sm-10">
+          <input name="year" ng-model="report.Year" class="form-control" type="number" min="1900" max="{{currentYear}}" placeholder="Año de publicación" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Author:</label>
+        <div class="col-sm-10">
+          <select ng-model="report.Author" class="form-control" name="author">
+            <option ng-repeat="option in autores" value="{{option.name}}">{{option.name}}</option>
+          </select>
+        </div>
+      </div>
+
+      <input type="submit" class="btn btn-primary" ng-click="saveReport()" value="Save"/>
+    </form>
+  </div>
+</div>
